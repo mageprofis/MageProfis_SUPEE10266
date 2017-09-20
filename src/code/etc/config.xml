@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <MageProfis_SUPEE10266>
+            <version>1.0.0.0</version>
+        </MageProfis_SUPEE10266>
+    </modules>
+
+    <global>
+
+        <helpers>
+            <mpsupee10266>
+                <class>MageProfis_SUPEE10266_Helper</class>
+            </mpsupee10266>
+        </helpers>
+        <blocks>
+            <mpsupee10266>
+                <class>MageProfis_SUPEE10266_Block</class>
+            </mpsupee10266>
+        </blocks>
+        <models>
+            <mpsupee10266>
+                <class>MageProfis_SUPEE10266_Model</class>
+            </mpsupee10266>
+            <core>
+                <rewrite>
+                    <email_template>MageProfis_SUPEE10266_Model_Core_Email_Template</email_template>
+                </rewrite>
+            </core>
+        </models>
+
+    </global>
+
+</config>
