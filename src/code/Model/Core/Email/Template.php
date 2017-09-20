@@ -25,11 +25,6 @@ extends Mage_Core_Model_Email_Template
         $package = Mage::getDesign()->getPackageName();
         $theme = Mage::getDesign()->getTheme('skin');
 
-        $origfilePath = $filePath;
-        $filePath = realpath($filePath);
-        $positionSkinDirectory = strpos($filePath, Mage::getBaseDir('skin'));
-        $validator = new Zend_Validate_File_Extension('css');
-
         $filePath = Mage::getDesign()->getFilename(
             'css' . DS . $filename,
             array(
@@ -41,7 +36,12 @@ extends Mage_Core_Model_Email_Template
                 '_theme' => $theme,
             )
         );
-        
+
+        $origfilePath = $filePath;
+        $filePath = realpath($filePath);
+        $positionSkinDirectory = strpos($filePath, Mage::getBaseDir('skin'));
+        $validator = new Zend_Validate_File_Extension('css');
+
         $obj = new Varien_Object();
         $obj->setOriginFilePath($origfilePath);
         $obj->setFilePath($filePath);
