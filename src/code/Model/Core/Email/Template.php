@@ -47,7 +47,7 @@ extends Mage_Core_Model_Email_Template
         $obj->setFilePath($filePath);
         $obj->setPositionSkinDirectory($positionSkinDirectory);
         $obj->setValidator($validator);
-        $obj->setStoreId($storeId)
+        $obj->setStoreId($storeId);
 
         Mage::dispatchEvent('mpsupee10266_validate_css', array(
             'object' => $obj,
